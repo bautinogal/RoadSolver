@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const inputFolder = path.join(__dirname, './input');
 const outputFolder = path.join(__dirname, './output');
+if (!fs.existsSync(outputFolder)) fs.mkdirSync(outputFolder);
+
 const solver = require('./solver');
 
 const getOutput = async () => {
